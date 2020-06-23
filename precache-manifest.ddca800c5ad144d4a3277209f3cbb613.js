@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aef7143bedd29d94c03244f040c23b17",
+    "revision": "cdc0a710da10396880a084e7f14ba69a",
     "url": "/tabitha-poeze-project-five/index.html"
   },
   {
-    "revision": "c8fbd2c89504f87e2e1d",
+    "revision": "b17f6908e85897e5f98f",
     "url": "/tabitha-poeze-project-five/static/css/main.58d9e5da.chunk.css"
   },
   {
-    "revision": "87a216bc2beebcb1d8a3",
-    "url": "/tabitha-poeze-project-five/static/js/2.3326cb5e.chunk.js"
+    "revision": "dfd0c49658af449ae0a8",
+    "url": "/tabitha-poeze-project-five/static/js/2.832fd556.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/tabitha-poeze-project-five/static/js/2.3326cb5e.chunk.js.LICENSE.txt"
+    "url": "/tabitha-poeze-project-five/static/js/2.832fd556.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8fbd2c89504f87e2e1d",
-    "url": "/tabitha-poeze-project-five/static/js/main.653d46cb.chunk.js"
+    "revision": "b17f6908e85897e5f98f",
+    "url": "/tabitha-poeze-project-five/static/js/main.948377d8.chunk.js"
   },
   {
     "revision": "4bceefd730c00b4b8f37",
