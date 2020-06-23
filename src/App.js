@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 import Form from './Form';
 import RelevantVillagers from './RelevantVillagers';
-// import ShowInfo from './ShowInfo';
+import ShowInfo from './ShowInfo';
 
 class App extends Component {
 
@@ -12,6 +12,8 @@ class App extends Component {
     this.state = {
       villagers: [],
       relVillagers: [],
+      hideInfo: true,
+      clickedVillager: []
     }
   }
 
@@ -34,6 +36,7 @@ class App extends Component {
           birthday: data[key]['birthday-string'],
           catchphrase: data[key]['catch-phrase'],
           icon: data[key]['icon_uri'],
+          image: data[key]['image_uri'],
           species: data[key]['species'],
         })
       }
@@ -51,11 +54,21 @@ class App extends Component {
     this.setState({
       relVillagers: relVillagers
     })
+    this.setState({
+      hideInfo: true
+    })
   }
 
-  showInfo = (event) => {
-    event.preventDefault();
-    console.log('clicked');
+  showInfo = (newEvent, id) => {
+    newEvent.preventDefault();
+    this.setState({
+      hideInfo: false
+    })
+    const copyOfRelVillagers = [...this.state.relVillagers];
+    const clickedVillager = copyOfRelVillagers.filter((villager) => villager.id == id)
+    this.setState({
+      clickedVillager: clickedVillager
+    })
   }
 
   render() {
@@ -70,12 +83,16 @@ class App extends Component {
           <div className="wrapper">
             <Form filterVillagers={this.filterVillagers} />
             <ul>
-              {this.state.relVillagers.map(({id, icon, name}) => {
-                return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} /> 
-              })}
-              {/* {this.state.relVillagers.map(({id, personality, birthday, catchphrase }) => {
-                return <RelevantVillagers id={id} personality={personality} birthday={birthday} catchphrase={catchphrase} />
-              })} */}
+              {this.state.hideInfo == false ? (this.state.clickedVillager.map(({ id, image, name, personality, birthday, catchphrase }) => {
+                return <div>
+                  <RelevantVillagers showInfo={this.showInfo} id={id} icon={image} name={name} />
+                  <ShowInfo id={id} personality={personality} birthday={birthday} catchphrase={catchphrase} />
+                </div>
+              })
+              ) : (this.state.relVillagers.map(({ id, icon, name }) => {
+                return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} />
+              })
+              )}
             </ul>
           </div>
         </main>
