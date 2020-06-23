@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
-import Axios from 'axios';
+import axios from 'axios';
+import Form from './Form';
+import RelevantVillagers from './RelevantVillagers';
+// import ShowInfo from './ShowInfo';
 
 class App extends Component {
 
@@ -8,27 +11,24 @@ class App extends Component {
     super();
     this.state = {
       villagers: [],
-      userSelection: '',
+      relVillagers: [],
     }
   }
 
   componentDidMount() {
-    Axios({
+    axios({
       url: 'https://acnhapi.com/v1/villagers/',
       method: 'GET',
       responseType: 'json',
-    }).then((response) => {
-      
-      const data = response.data;
+    }).then((response) => { 
 
-      console.log(data);
+      const data = response.data;
 
       const newState = [];
 
       for (let key in data) {
         newState.push({
           id: key,
-          no: data[key]['id'],
           name: data[key]['name']['name-USen'],
           personality: data[key]['personality'],
           birthday: data[key]['birthday-string'],
@@ -41,73 +41,51 @@ class App extends Component {
       this.setState({
         villagers: newState
       })
+    } 
+  )}
+
+  filterVillagers = (event, userSelection) => {
+    event.preventDefault();
+    const copyOfVillagers = [...this.state.villagers];
+    const relVillagers = copyOfVillagers.filter((villager) => villager.species == userSelection)
+    this.setState({
+      relVillagers: relVillagers
     })
   }
 
-  handleChange = (event) => {
-    this.setState({
-      userSelection: event.target.value,
-    })
+  showInfo = (event) => {
+    event.preventDefault();
+    console.log('clicked');
   }
 
   render() {
     return (
-      <div className="villagers">
-        <h1>Villager App</h1>
-        <form>
-          <select onChange={this.handleChange} id="species" name="userSelection">
-            <option value="Clear">No Selection</option>
-            <option value="Alligator">Alligator</option>
-            <option value="Anteater">Anteater</option>
-            <option value="Bird">Bird</option>
-            <option value="Bear">Bear</option>
-            <option value="Cat">Cat</option>
-            <option value="Chicken">Chicken</option>
-            <option value="Cow">Cow</option>
-            <option value="Cub">Cub</option>
-            <option value="Deer">Deer</option>
-            <option value="Dog">Dog</option>
-            <option value="Duck">Duck</option>
-            <option value="Eagle">Eagle</option>
-            <option value="Elephant">Elephant</option>
-            <option value="Frog">Frog</option>
-            <option value="Goat">Goat</option>
-            <option value="Hamster">Hamster</option>
-            <option value="Hippo">Hippo</option>
-            <option value="Horse">Horse</option>
-            <option value="Koala">Koala</option>
-            <option value="Kangaroo">Kangaroo</option>
-            <option value="Lion">Lion</option>
-            <option value="Monkey">Monkey</option>
-            <option value="Mouse">Mouse</option>
-            <option value="Octopus">Octopus</option>
-            <option value="Penguin">Penguin</option>
-            <option value="Pig">Pig</option>
-            <option value="Rabbit">Rabbit</option>
-            <option value="Rhino">Rhino</option>
-            <option value="Sheep">Sheep</option>
-            <option value="Squirrel">Squirrel</option>
-            <option value="Tiger">Tiger</option>
-            <option value="Wolf">Wolf</option>
-          </select> 
-        </form>
-        <ul>
-          {this.state.villagers.map((villager) => {
-            if (this.state.userSelection === villager.species) {
-              return (
-                <li key={villager.id}>
-                  <img src={villager.icon} alt={villager.name}></img>
-                  <p>name: {villager.name}</p>
-                  <p>personality: {villager.personality}</p>
-                  <p>birthday: {villager.birthday}</p>
-                  <p>catchphrase: "{villager.catchphrase}"</p>
-                </li>
-              )
-            }
-          })}
-        </ul>
-      </div>
-    );
+      <Fragment>
+        <header>
+          <div className="wrapper">
+            <h1>ACNH Villager App</h1>
+          </div>
+        </header>
+        <main>
+          <div className="wrapper">
+            <Form filterVillagers={this.filterVillagers} />
+            <ul>
+              {this.state.relVillagers.map(({id, icon, name}) => {
+                return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} /> 
+              })}
+              {/* {this.state.relVillagers.map(({id, personality, birthday, catchphrase }) => {
+                return <RelevantVillagers id={id} personality={personality} birthday={birthday} catchphrase={catchphrase} />
+              })} */}
+            </ul>
+          </div>
+        </main>
+        <footer>
+          <div className="wrapper">
+            <p>Made with <span role="img" aria-label="">💖</span> by Tabitha Poeze</p>
+          </div>
+        </footer>
+      </Fragment>
+    )
   }
 }
 
