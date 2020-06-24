@@ -5,7 +5,7 @@ import Form from './Form';
 import Instructions from './Instructions';
 import RelevantVillagers from './RelevantVillagers';
 import ShowInfo from './ShowInfo';
-import logo from './logo.png';
+import logo from './assets/logo.png';
 
 class App extends Component {
 
@@ -90,21 +90,21 @@ class App extends Component {
           <div className="wrapper">
             <Form filterVillagers={this.filterVillagers} />
             {this.state.showInstructions === true ? (<Instructions />) : (<p></p>)}
-            {this.state.hideInfo === false ? 
+            {this.state.hideInfo === true ? 
+            (<ul className="relVillagerList">{this.state.relVillagers.map(({ id, icon, name }) => {
+                return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} />
+            })}</ul>) : 
             (this.state.clickedVillager.map(({ id, image, name, personality, birthday, catchphrase }) => {
               return <ul className="moreInfo">
                 <ShowInfo id={id} icon={image} name={name} personality={personality} birthday={birthday} catchphrase={catchphrase} />
               </ul>
             })
-            ) : (<ul className="relVillagerList">{this.state.relVillagers.map(({ id, icon, name }) => {
-              return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} />
-            })
-            }</ul>)}
+            )}
           </div>
         </main>
         <footer>
           <div className="wrapper">
-            <p>Made with <span role="img" aria-label="">💖</span> by Tabitha Poeze</p>
+            <p>Made with <span role="img" aria-label="pink heart with yellow sparkles">💖</span> by Tabitha Poeze</p>
           </div>
         </footer>
       </Fragment>

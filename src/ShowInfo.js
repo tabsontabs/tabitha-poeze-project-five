@@ -5,12 +5,6 @@ class ShowInfo extends Component {
     render() {
         return (
             <Fragment key={this.props.id}>
-                {/* <li>
-                    <ul className="instructionsList">
-                        <li><p>Click 'DISPLAY' to go back to all the icons of your previously selected species OR</p></li>
-                        <li><p>Use the dropdown menu to make a new selection and then click 'DISPLAY'.</p></li>
-                    </ul>
-                </li> */}
                 <li><img src={this.props.icon} alt={this.props.name}></img></li>
                 <li>
                     <ul className="showInfoTextBox">

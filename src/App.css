@@ -1,3 +1,5 @@
+/* SETUP SNIPPETS */
+
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
@@ -8,14 +10,19 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+
+/* GENERAL STYLES */
+
 h1, h2, p, ul, li, button, ol {
   padding: 0;
   margin: 0;
 }
 
-.App {
-  text-align: center;
+ul {
+  list-style: none;
 }
+
+/* WRAPPER STYLES */
 
 .wrapper {
   max-width: 1200px;
@@ -23,9 +30,10 @@ h1, h2, p, ul, li, button, ol {
   width: 90%;
 }
 
+/* HEADER STYLES */
+
 header {
   background-color: paleturquoise;
-  color: black;
   border: 2px solid black;
 }
 
@@ -44,6 +52,7 @@ header img {
 }
 
 h1 {
+  color: black;
   font-size: 2rem;
   text-align: center;
   font-family: 'Dosis';
@@ -51,13 +60,16 @@ h1 {
   padding-bottom: 10px;
 }
 
+/* GENERAL MAIN STYLES */
+
 main {
   background-color: peachpuff;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border: 2px solid black;
+  border-top: none;
   font-family: 'Roboto';
 }
+
+/* FORM STYLES (includes select and button */
 
 form {
   display: flex;
@@ -67,11 +79,9 @@ form {
 }
 
 .selectBox {
-  background-color: white;
   display: inline-block;
   position: relative;
-  border: 2px solid black;
-  background-color: pink;
+  /* border: 2px solid black; */
 }
 
 .selectBox::after {
@@ -82,41 +92,41 @@ form {
   font-weight: bold;
 }
 
-select:hover, select:focus {
-  background-color: paleturquoise;
+select, .display {
+  background-color: pink;
+  font-family: 'Dosis';
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 select {
-  background-color: transparent;
   border: none;
   padding: 10px 30px 10px 10px;
   position: relative;
-  font-family: 'Dosis';
-  letter-spacing: 1px;
+  text-indent: 2px;
+  width: 100%;
+  border: 2px solid black;
   /* to remove generic dropdown arrow: */
   -webkit-appearance: none;
   -ms-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
 }
 
 .display {
   text-decoration: none;
-  background-color: pink;
   border: 2px solid black;
   padding: 10px;
   margin-left: 10px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Dosis';
-  letter-spacing: 1px;
 }
 
-.display:hover, .display:focus {
+select:hover, select:focus, .display:hover, .display:focus {
   background-color: paleturquoise;
 }
+
+
+/* INSTRUCTIONS STYLES */
 
 .instructions {
   display: flex;
@@ -124,9 +134,20 @@ select {
   justify-content: space-evenly;
 }
 
-.instructions img {
+h2 {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    font-family: 'Dosis';
+}
+
+.mobileImage {
   width: 100%;
   border: 2px solid black;
+}
+
+.desktopImage {
+  display: none;
 }
 
 .instructionsTextBox {
@@ -136,22 +157,16 @@ select {
   line-height: 20px;
   margin-bottom: 20px;
   font-weight: 500;
-  padding-left: 10px;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border: 2px solid black;
+  border-top: none;
 }
 
 .instructionsTextBox p {
-  margin-top: 15px;
-}
+    padding: 15px 5px 0px 15px;
+  }
 
 .instructionsTextBox p:last-of-type {
   margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
 }
 
 li {
@@ -161,6 +176,8 @@ li {
 li p {
   padding-bottom: 15px;
 }
+
+/* VILLAGER LIST STYLES */
 
 .relVillagerList {
   display: flex;
@@ -185,16 +202,17 @@ li p {
   background-color: lightgray;
 }
 
+/* SHOW INFO (SELECTED, INDIVIDUAL VILLAGER) STYLES */
+
 .moreInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .moreInfo img {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
   border: 2px solid black;
 }
 
@@ -203,12 +221,12 @@ li p {
   font-size: 1.2rem;
 }
 
+/* FOOTER STYLES */
+
 footer {
   background-color:pink;
-  height: 10vh;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border: 2px solid black;
+  border-top: none;
 }
 
 footer div {
@@ -216,13 +234,15 @@ footer div {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  padding: 15px;
 }
 
 footer p {
   font-size: 1rem;
-  font-weight: bold;
+  font-family: 'Dosis';
 }
+
+/* MEDIA QUERIES: */
 
 @media (min-width: 500px) {
   select {
@@ -252,7 +272,7 @@ footer p {
     font-size: 2.5rem;
   }
 
-  select, .display, .selectBox::after {
+  select, .display, .selectBox::after, .villagerName  {
     font-size: 1.5rem;
   }
 
@@ -268,18 +288,72 @@ footer p {
     justify-content: center;
   }
 
-  .villagerName {
-    font-size: 1.5rem;
-  }
-
   li p {
     font-size: 1.3rem; 
   }
 }
 
+@media (min-width: 700px) {
+  .mobileImage {
+    display: none;
+  }
+
+  .instructions {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .desktopImage {
+    display: block;
+    width: 30%;
+  }
+
+  .instructionsTextBox {
+    border: none;
+    width: 65%;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    padding-top: 0;
+  }
+
+  .instructionsTextBox p {
+    padding-left: 40px;
+    padding-right: 0;
+  }
+}
+
 @media (min-width: 800px) {
+
+  header div {
+    justify-content: center;
+  }
+
+  header img {
+    width: 20%;
+  }  
+
   h1 {
+    margin-left: 30px;
     font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+
+  .instructions {
+    justify-content: center;
+  }
+
+  .desktopImage {
+    width: 20%;
+  }
+
+  .instructionsTextBox {
+    width: 55%;
   }
 
   .instructionsTextBox p {
