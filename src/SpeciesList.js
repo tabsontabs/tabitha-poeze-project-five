@@ -6,7 +6,7 @@ class SpeciesList extends Component {
     render() {
         return (
             <Fragment>
-                <option disabled value="">Select A Species</option>
+                <option disabled value="">Make A Selection</option>
                 {   
                     villagerSpecies.map((species, index) => {
                         return (
