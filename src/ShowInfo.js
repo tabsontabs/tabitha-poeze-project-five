@@ -12,10 +12,14 @@ class ShowInfo extends Component {
                     </ul>
                 </li> */}
                 <li><img src={this.props.icon} alt={this.props.name}></img></li>
-                <li><p className="villagerName">{this.props.name}</p></li>
-                <li><p className="villagerBday">Birthday: {this.props.birthday}</p></li>
-                <li><p>Catchphrase: "{this.props.catchphrase}"</p></li>
-                <li><p>Personality: {this.props.personality}</p></li>
+                <li>
+                    <ul className="showInfoTextBox">
+                        <li><p className="villagerName">{this.props.name}</p></li>
+                        <li><p className="villagerBday">Birthday: {this.props.birthday}</p></li>
+                        <li><p>Catchphrase: "{this.props.catchphrase}"</p></li>
+                        <li><p>Personality: {this.props.personality}</p></li>  
+                    </ul>
+                </li>
             </Fragment>
         );
     }

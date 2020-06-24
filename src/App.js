@@ -5,6 +5,7 @@ import Form from './Form';
 import Instructions from './Instructions';
 import RelevantVillagers from './RelevantVillagers';
 import ShowInfo from './ShowInfo';
+import logo from './logo.png';
 
 class App extends Component {
 
@@ -81,7 +82,8 @@ class App extends Component {
       <Fragment>
         <header>
           <div className="wrapper">
-            <h1>ACNH Villager App</h1>
+            <img className="headerImage" src={logo} alt='logo for Animal Crossing: New Horizons'></img>
+            <h1>The Villager Finder</h1>
           </div>
         </header>
         <main>
@@ -94,12 +96,10 @@ class App extends Component {
                 <ShowInfo id={id} icon={image} name={name} personality={personality} birthday={birthday} catchphrase={catchphrase} />
               </ul>
             })
-            ) : (this.state.relVillagers.map(({ id, icon, name }) => {
-              return <ul>
-                <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} />
-              </ul>
+            ) : (<ul className="relVillagerList">{this.state.relVillagers.map(({ id, icon, name }) => {
+              return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} />
             })
-            )}
+            }</ul>)}
           </div>
         </main>
         <footer>

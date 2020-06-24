@@ -8,7 +8,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-h1, p, ul, li, button, ol {
+h1, h2, p, ul, li, button, ol {
   padding: 0;
   margin: 0;
 }
@@ -18,45 +18,52 @@ h1, p, ul, li, button, ol {
 }
 
 .wrapper {
-  max-width: 2000px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 90%;
 }
 
 header {
   background-color: paleturquoise;
-  height: 15vh;
   color: black;
   border: 2px solid black;
 }
 
 header div {
-  height: 15vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+header img {
+  width: 40%;
+  padding-bottom: 2px;
 }
 
 h1 {
   font-size: 2rem;
   text-align: center;
+  font-family: 'Dosis';
+  letter-spacing: 2px;
+  padding-bottom: 10px;
 }
 
 main {
   background-color: peachpuff;
-  min-height: 75vh;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  font-family: 'Roboto';
 }
 
 form {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 30px 0px 30px 0px;
 }
 
 .selectBox {
@@ -69,12 +76,10 @@ form {
 
 .selectBox::after {
   content: '▼';
-  /* content: ' \25BC'; */
   position: absolute;
-  top: 20%;
+  top: 25%;
   right: 5%;
   font-weight: bold;
-  /* z-index: 10; */
 }
 
 select:hover, select:focus {
@@ -84,12 +89,11 @@ select:hover, select:focus {
 select {
   background-color: transparent;
   border: none;
-  font-weight: bold;
   padding: 10px 30px 10px 10px;
-  /* display: block; */
   position: relative;
-  /* z-index: 5; */
-  /* to remove generic dropdown arrow */
+  font-family: 'Dosis';
+  letter-spacing: 1px;
+  /* to remove generic dropdown arrow: */
   -webkit-appearance: none;
   -ms-appearance: none;
   -moz-appearance: none;
@@ -106,6 +110,8 @@ select {
   margin-left: 10px;
   text-transform: uppercase;
   font-weight: bold;
+  font-family: 'Dosis';
+  letter-spacing: 1px;
 }
 
 .display:hover, .display:focus {
@@ -113,14 +119,13 @@ select {
 }
 
 .instructions {
-  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .instructions img {
-  max-width: 100%;
+  width: 100%;
   border: 2px solid black;
 }
 
@@ -128,25 +133,25 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   line-height: 20px;
   margin-bottom: 20px;
+  font-weight: 500;
+  padding-left: 10px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .instructionsTextBox p {
   margin-top: 15px;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 10px;
+.instructionsTextBox p:last-of-type {
+  margin-bottom: 15px;
 }
 
-ul:last-of-type {
-  padding-bottom: 30px;
+ul {
+  list-style: none;
 }
 
 li {
@@ -154,7 +159,18 @@ li {
 }
 
 li p {
-  line-height: 25px;
+  padding-bottom: 15px;
+}
+
+.relVillagerList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 25px;
+}
+
+.relVillagerItem {
+  flex-basis: 25%;
 }
 
 .villagerButton {
@@ -169,19 +185,22 @@ li p {
   background-color: lightgray;
 }
 
+.moreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
 .moreInfo img {
   margin-top: 10px;
   margin-bottom: 20px;
   border: 2px solid black;
 }
 
-.villagerName {
+.villagerName, .listItemName {
   font-weight: bold;
   font-size: 1.2rem;
-}
-
-.villagerBday {
-  padding-top: 10px;
 }
 
 footer {
@@ -205,4 +224,117 @@ footer p {
   font-weight: bold;
 }
 
+@media (min-width: 500px) {
+  select {
+    width: 45vw;
+  }
 
+  .display {
+    width: 20vw
+  }
+}
+
+@media (min-width: 600px) {
+
+  header div {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px 0px 15px 0px;
+  }
+
+  header img {
+    width: 30%;
+    padding-bottom: 0;
+  }
+
+  h1 {
+    padding-bottom: 0;
+    font-size: 2.5rem;
+  }
+
+  select, .display, .selectBox::after {
+    font-size: 1.5rem;
+  }
+
+  select {
+    width: 50vw;
+  }
+
+  .instructionsTextBox p {
+    font-size: 1.1rem;
+  }
+
+  .relVillagerList {
+    justify-content: center;
+  }
+
+  .villagerName {
+    font-size: 1.5rem;
+  }
+
+  li p {
+    font-size: 1.3rem; 
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .instructionsTextBox p {
+    font-size: 1.3rem;
+    line-height: 25px;  
+  }
+
+  .moreInfo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .showInfoTextBox {
+    margin-left: 50px;
+  }
+
+  .villagerName {
+    font-size: 2.5rem;
+  }
+
+  li p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .moreInfo img {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  select, .display  {
+    font-size: 2rem;
+  }
+
+  select {
+    width: 60vw;
+  }
+
+  .relVillagerItem {
+  flex-basis: 20%;
+}
+
+  .villagerName {
+    font-size: 3rem;
+  }
+
+  li p {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
