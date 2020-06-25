@@ -13,6 +13,7 @@ class ShowInfo extends Component {
                         <li><p>Species: {this.props.species}</p></li>
                         <li><p>Catchphrase: "{this.props.catchphrase}"</p></li>
                         <li><p>Personality: {this.props.personality}</p></li>  
+                        <li><p>Zodiac Sign: {this.props.zodiacSign}</p></li>  
                     </ul>
                 </li>
             </Fragment>

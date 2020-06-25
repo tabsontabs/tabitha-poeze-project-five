@@ -43,9 +43,9 @@ class Form extends Component {
                     <div className="selectBox">
                         <label htmlFor="userSelection" className="sr-only">Options</label>
                         <select id="userSelection" value={this.state.userSelection} onChange={this.handleChange}>
-                            {this.state.userRadioSelection === 'Species' ? (<SpeciesList />) : 
+                            {this.state.userRadioSelection === 'Personality' ? (<PersonalitiesList />) : 
                             this.state.userRadioSelection === 'Zodiac' ? (<ZodiacList />) :
-                            (<PersonalitiesList />)}
+                            (<SpeciesList />)}
                         </select>
                     </div>
                     <button className="display" onClick={(event) => this.props.filterVillagers(event, this.state.userSelection)}>Display</button>

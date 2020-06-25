@@ -94,9 +94,7 @@ class App extends Component {
     this.setState({
       hideInfo: true
     })
-    this.setState({
-      showInstructions: false
-    })
+    userSelection == '' ? this.setState({showInstructions: true}) : this.setState({showInstructions: false})
   }
 
   showInfo = (newEvent, id) => {
@@ -132,9 +130,9 @@ class App extends Component {
             (<ul className="relVillagerList">{this.state.relVillagers.map(({ id, icon, name }) => {
                 return <RelevantVillagers showInfo={this.showInfo} id={id} icon={icon} name={name} />
             })}</ul>) : 
-            (this.state.clickedVillager.map(({ id, image, name, personality, birthday, catchphrase, species }) => {
+            (this.state.clickedVillager.map(({ id, image, name, personality, birthday, catchphrase, species, zodiacSign }) => {
               return <ul className="moreInfo">
-                <ShowInfo id={id} icon={image} name={name} personality={personality} birthday={birthday} catchphrase={catchphrase} species={species} />
+                <ShowInfo id={id} icon={image} name={name} personality={personality} birthday={birthday} catchphrase={catchphrase} species={species} zodiacSign={zodiacSign} />
               </ul>
             })
             )}

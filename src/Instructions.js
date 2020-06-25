@@ -12,7 +12,7 @@ class Instructions extends Component {
                 <img className="desktopImage" src={isabelle} alt="A group of Animal Crossing:New Horizons villagers celebrating in front of a museum."></img>
                 <div className="instructionsTextBox">
                     <h2>Instructions</h2>
-                    <p>Choose what type of search you would like to perform.</p>
+                    <p>Choose what type of search you would like to perform (Species, Personality, or Zodiac).</p>
                     <p>Then, choose an option from the dropdown menu.</p>
                     <p>Click the "DISPLAY" button to view names and icons for all associated villagers.</p>
                     <p>You can click on a villager's icon to view their full photo and more information about them.</p>
