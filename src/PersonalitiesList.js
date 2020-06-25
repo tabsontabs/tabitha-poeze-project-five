@@ -1,17 +1,16 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import villagerSpecies from './species';
+import villagerPersonality from './personality';
 
-class SpeciesList extends Component {
-
+class PersonalitiesList extends Component {
     render() {
         return (
             <Fragment>
                 <option disabled value="">Options</option>
                 {
-                    villagerSpecies.map((species, index) => {
+                    villagerPersonality.map((personality, index) => {
                         return (
-                            <option key={index} value={species.type}>{species.type}</option>
+                            <option key={index} value={personality.type}>{personality.type}</option>
                         )
                     })
                 }
@@ -20,4 +19,4 @@ class SpeciesList extends Component {
     }
 }
 
-export default SpeciesList;
+export default PersonalitiesList;

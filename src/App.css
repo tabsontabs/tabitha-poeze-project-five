@@ -13,7 +13,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 /* GENERAL STYLES */
 
-h1, h2, p, ul, li, button, ol {
+h1, h2, p, ul, li, button, ol, a {
   padding: 0;
   margin: 0;
 }
@@ -33,7 +33,7 @@ ul {
 /* HEADER STYLES */
 
 header {
-  background-color: paleturquoise;
+  background-color: pink;
   border: 2px solid black;
 }
 
@@ -46,9 +46,19 @@ header div {
   padding: 10px 0 10px 0;
 }
 
-header img {
+header a {
   width: 40%;
   padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+header a:hover, header a:focus {
+  opacity: 0.5;
+}
+
+header img {
+  width: 100%;
 }
 
 h1 {
@@ -69,19 +79,55 @@ main {
   font-family: 'Roboto';
 }
 
-/* FORM STYLES (includes select and button */
+/* FORM STYLES (includes radios, select, and display button */
 
 form {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 30px 0px 30px 0px;
+}
+
+form:first-of-type {
+  padding: 30px 0px 10px 0px;
+}
+
+form:last-of-type {
+  padding: 10px 0px 30px 0px;
+}
+
+fieldset {
+  border: none;
+  display: inline-block;
+  width: 100%;
+}
+
+label {
+  padding: 10px;
+  border: 2px solid black;
+  display: inline-block;
+  width: calc((100% - 20px)/3);
+  text-align: center;
+}
+
+label:first-of-type {
+  margin-right: 10px;
+}
+
+label:last-of-type {
+  margin-left: 10px;
+}
+
+input[type=radio]:checked + label {
+  background-color: paleturquoise
+}
+
+label:hover, label:focus {
+  background-color: paleturquoise;
 }
 
 .selectBox {
   display: inline-block;
   position: relative;
-  /* border: 2px solid black; */
 }
 
 .selectBox::after {
@@ -92,7 +138,7 @@ form {
   font-weight: bold;
 }
 
-select, .display {
+select, .display, label {
   background-color: pink;
   font-family: 'Dosis';
   letter-spacing: 1px;
@@ -104,7 +150,7 @@ select {
   padding: 10px 30px 10px 10px;
   position: relative;
   text-indent: 2px;
-  width: 100%;
+  width: 40vw;
   border: 2px solid black;
   /* to remove generic dropdown arrow: */
   -webkit-appearance: none;
@@ -162,7 +208,7 @@ h2 {
 }
 
 .instructionsTextBox p {
-    padding: 15px 5px 0px 15px;
+    padding: 15px 10px 0px 15px;
   }
 
 .instructionsTextBox p:last-of-type {
@@ -262,7 +308,7 @@ footer p {
     padding: 15px 0px 15px 0px;
   }
 
-  header img {
+  header a {
     width: 30%;
     padding-bottom: 0;
   }
@@ -272,7 +318,7 @@ footer p {
     font-size: 2.5rem;
   }
 
-  select, .display, .selectBox::after, .villagerName  {
+  select, .display, .selectBox::after, .villagerName, label {
     font-size: 1.5rem;
   }
 
@@ -305,7 +351,6 @@ footer p {
 
   .desktopImage {
     display: block;
-    width: 30%;
   }
 
   .instructionsTextBox {
@@ -330,7 +375,7 @@ footer p {
     justify-content: center;
   }
 
-  header img {
+  header a {
     width: 20%;
   }  
 
@@ -346,10 +391,6 @@ footer p {
 
   .instructions {
     justify-content: center;
-  }
-
-  .desktopImage {
-    width: 20%;
   }
 
   .instructionsTextBox {
@@ -391,7 +432,7 @@ footer p {
     font-size: 4rem;
   }
 
-  select, .display  {
+  select, .display, label  {
     font-size: 2rem;
   }
 
@@ -411,4 +452,59 @@ footer p {
     font-size: 2rem;
     line-height: 40px;
   }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  select, .display, label  {
+    font-size: 2rem;
+  }
+
+  select {
+    width: 60vw;
+  }
+
+  .relVillagerItem {
+  flex-basis: 20%;
+}
+
+  .villagerName {
+    font-size: 3rem;
+  }
+
+  li p {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+
+@media(min-width: 1100px) {
+  label {
+  padding: 10px;
+  border: 2px solid black;
+  display: inline-block;
+  width: calc((100% - 40px)/3);
+}
+
+  label:first-of-type {
+    margin-right: 20px;
+  }
+
+  label:last-of-type {
+    margin-left: 20px;
+  }
+
+  select {
+    width: 55vw;
+    max-width: 600px;
+  }
+
+  .display {
+    margin-left: 20px;
+    max-width: 200px;
+  }
+
 }
