@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tabitha-poeze-project-five/static/css/main.1d9580d4.chunk.css",
-    "main.js": "/tabitha-poeze-project-five/static/js/main.a04e5c31.chunk.js",
-    "main.js.map": "/tabitha-poeze-project-five/static/js/main.a04e5c31.chunk.js.map",
+    "main.css": "/tabitha-poeze-project-five/static/css/main.3e558fa6.chunk.css",
+    "main.js": "/tabitha-poeze-project-five/static/js/main.356bfb43.chunk.js",
+    "main.js.map": "/tabitha-poeze-project-five/static/js/main.356bfb43.chunk.js.map",
     "runtime-main.js": "/tabitha-poeze-project-five/static/js/runtime-main.759bb205.js",
     "runtime-main.js.map": "/tabitha-poeze-project-five/static/js/runtime-main.759bb205.js.map",
-    "static/js/2.a0658d00.chunk.js": "/tabitha-poeze-project-five/static/js/2.a0658d00.chunk.js",
-    "static/js/2.a0658d00.chunk.js.map": "/tabitha-poeze-project-five/static/js/2.a0658d00.chunk.js.map",
+    "static/js/2.d1a9f743.chunk.js": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js",
+    "static/js/2.d1a9f743.chunk.js.map": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js.map",
     "index.html": "/tabitha-poeze-project-five/index.html",
-    "precache-manifest.e8864aa0e374634a405125fb9783575b.js": "/tabitha-poeze-project-five/precache-manifest.e8864aa0e374634a405125fb9783575b.js",
+    "precache-manifest.a4296bc105d8b959ea04d756f911fad8.js": "/tabitha-poeze-project-five/precache-manifest.a4296bc105d8b959ea04d756f911fad8.js",
     "service-worker.js": "/tabitha-poeze-project-five/service-worker.js",
-    "static/css/main.1d9580d4.chunk.css.map": "/tabitha-poeze-project-five/static/css/main.1d9580d4.chunk.css.map",
-    "static/js/2.a0658d00.chunk.js.LICENSE.txt": "/tabitha-poeze-project-five/static/js/2.a0658d00.chunk.js.LICENSE.txt",
+    "static/css/main.3e558fa6.chunk.css.map": "/tabitha-poeze-project-five/static/css/main.3e558fa6.chunk.css.map",
+    "static/js/2.d1a9f743.chunk.js.LICENSE.txt": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js.LICENSE.txt",
     "static/media/isabelle.png": "/tabitha-poeze-project-five/static/media/isabelle.e81857d6.png",
     "static/media/logo.png": "/tabitha-poeze-project-five/static/media/logo.435f9ace.png",
     "static/media/villagers6.jpg": "/tabitha-poeze-project-five/static/media/villagers6.fcc2dd76.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.759bb205.js",
-    "static/js/2.a0658d00.chunk.js",
-    "static/css/main.1d9580d4.chunk.css",
-    "static/js/main.a04e5c31.chunk.js"
+    "static/js/2.d1a9f743.chunk.js",
+    "static/css/main.3e558fa6.chunk.css",
+    "static/js/main.356bfb43.chunk.js"
   ]
 }

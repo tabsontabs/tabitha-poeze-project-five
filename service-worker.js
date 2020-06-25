@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tabitha-poeze-project-five/precache-manifest.e8864aa0e374634a405125fb9783575b.js"
+  "/tabitha-poeze-project-five/precache-manifest.a4296bc105d8b959ea04d756f911fad8.js"
 );
 
 self.addEventListener('message', (event) => {
