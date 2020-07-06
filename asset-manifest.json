@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tabitha-poeze-project-five/static/css/main.aad475a8.chunk.css",
+    "main.css": "/tabitha-poeze-project-five/static/css/main.b3f7634a.chunk.css",
     "main.js": "/tabitha-poeze-project-five/static/js/main.527994b6.chunk.js",
     "main.js.map": "/tabitha-poeze-project-five/static/js/main.527994b6.chunk.js.map",
     "runtime-main.js": "/tabitha-poeze-project-five/static/js/runtime-main.759bb205.js",
@@ -8,9 +8,9 @@
     "static/js/2.d1a9f743.chunk.js": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js",
     "static/js/2.d1a9f743.chunk.js.map": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js.map",
     "index.html": "/tabitha-poeze-project-five/index.html",
-    "precache-manifest.596ddc580ab957c2c059cb946c8a65af.js": "/tabitha-poeze-project-five/precache-manifest.596ddc580ab957c2c059cb946c8a65af.js",
+    "precache-manifest.228deb7990afdaaea4912127742017de.js": "/tabitha-poeze-project-five/precache-manifest.228deb7990afdaaea4912127742017de.js",
     "service-worker.js": "/tabitha-poeze-project-five/service-worker.js",
-    "static/css/main.aad475a8.chunk.css.map": "/tabitha-poeze-project-five/static/css/main.aad475a8.chunk.css.map",
+    "static/css/main.b3f7634a.chunk.css.map": "/tabitha-poeze-project-five/static/css/main.b3f7634a.chunk.css.map",
     "static/js/2.d1a9f743.chunk.js.LICENSE.txt": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js.LICENSE.txt",
     "static/media/isabelle.png": "/tabitha-poeze-project-five/static/media/isabelle.e81857d6.png",
     "static/media/logo.png": "/tabitha-poeze-project-five/static/media/logo.435f9ace.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.759bb205.js",
     "static/js/2.d1a9f743.chunk.js",
-    "static/css/main.aad475a8.chunk.css",
+    "static/css/main.b3f7634a.chunk.css",
     "static/js/main.527994b6.chunk.js"
   ]
 }
