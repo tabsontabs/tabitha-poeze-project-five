@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e984177bdc8840f329967d10694ef2d9",
+    "revision": "a0cd74554363a87dfe09098ec29dff80",
     "url": "/tabitha-poeze-project-five/index.html"
   },
   {
-    "revision": "69ba221f3681b2768f48",
-    "url": "/tabitha-poeze-project-five/static/css/main.7f50f071.chunk.css"
+    "revision": "52b9b707c03608461b1e",
+    "url": "/tabitha-poeze-project-five/static/css/main.aad475a8.chunk.css"
   },
   {
     "revision": "495a76b4ac47ea0af134",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tabitha-poeze-project-five/static/js/2.d1a9f743.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "69ba221f3681b2768f48",
-    "url": "/tabitha-poeze-project-five/static/js/main.99a4fd97.chunk.js"
+    "revision": "52b9b707c03608461b1e",
+    "url": "/tabitha-poeze-project-five/static/js/main.527994b6.chunk.js"
   },
   {
     "revision": "4bceefd730c00b4b8f37",
