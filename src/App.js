@@ -14,8 +14,8 @@ class App extends Component {
     this.state = {
       villagers: [],
       relVillagers: [],
-      hideInfo: true,
       clickedVillager: [],
+      hideInfo: true,
       showInstructions: true,
     }
   }
@@ -28,6 +28,8 @@ class App extends Component {
     }).then((response) => { 
 
       const data = response.data;
+      
+      console.log(data);
 
       const newState = [];
 
@@ -140,7 +142,7 @@ class App extends Component {
         </main>
         <footer>
           <div className="wrapper">
-            <p>Made with <span role="img" aria-label="pink heart with yellow sparkles">💖</span> by Tabitha Poeze</p>
+            <p>Made with <span role="img" aria-label="pink heart with yellow sparkles">💖</span> by <a href="https://www.tabithapoeze.com/">Tabitha Poeze</a> using the <a href="https://acnhapi.com/">Animal Crossing: New Horizons API</a></p>
           </div>
         </footer>
       </Fragment>
