@@ -4,6 +4,7 @@ import './App.css';
 class ShowInfo extends Component {
     render() {
         return (
+            // display relevant information for a specific villager based on the villager (and their id) that was clicked
             <Fragment key={this.props.id}>
                 <li><img src={this.props.icon} alt={this.props.name}></img></li>
                 <li>

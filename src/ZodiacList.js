@@ -8,6 +8,7 @@ class ZodiacList extends Component {
             <Fragment>
                 <option disabled value="">Options</option>
                 {
+                    // map through the array of zodiac signs to return options for the user to select when filtering
                     villagerZodiac.map((sign, index) => {
                         return (
                             <option key={index} value={sign.type}>{sign.type}</option>

@@ -4,6 +4,7 @@ import './App.css';
 class RelevantVillagers extends Component {
     render() {
         return (
+            // show a list of villagers and their icons based on the selected user value for filtering once the user clicks submit
             <Fragment>
                 <li className="relVillagerItem">
                     <ul>
