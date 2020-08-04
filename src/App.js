@@ -57,7 +57,7 @@ class App extends Component {
       }
 
       // determine to villager's zodiac sign based on the 'birthday' and 'birthday-string' provided by the API', have the results into another array
-      const finalState = newState.map((villager) => {
+      const zodiacState = newState.map((villager) => {
         if ((villager.zodiacMonth == 'May' && villager.zodiacDay < 21) || (villager.zodiacMonth == 'Apr' && villager.zodiacDay > 19)) {
           villager.zodiacSign = "Taurus"; return villager;
         } else if ((villager.zodiacMonth == 'Jun' && villager.zodiacDay < 22) || (villager.zodiacMonth == 'May' && villager.zodiacDay > 20)) {
@@ -73,7 +73,7 @@ class App extends Component {
         } else if ((villager.zodiacMonth == 'Nov' && villager.zodiacDay < 23) || (villager.zodiacMonth == 'Oct' && villager.zodiacDay > 22)) {
           villager.zodiacSign = "Scorpio"; return villager;
         } else if ((villager.zodiacMonth == 'Dec' && villager.zodiacDay < 21) || (villager.zodiacMonth == 'Nov' && villager.zodiacDay > 22)) {
-          villager.zodiacSign = "Saggitarius"; return villager;
+          villager.zodiacSign = "Sagittarius"; return villager;
         } else if ((villager.zodiacMonth == 'Jan' && villager.zodiacDay < 21) || (villager.zodiacMonth == 'Dec' && villager.zodiacDay > 20)) {
           villager.zodiacSign = "Capricorn"; return villager;
         } else if ((villager.zodiacMonth == 'Feb' && villager.zodiacDay < 20) || (villager.zodiacMonth == 'Jan' && villager.zodiacDay > 20)) {
@@ -84,9 +84,9 @@ class App extends Component {
           villager.zodiacSign = "Aries"; return villager;
         }
       })
-      
+
       this.setState({
-        villagers: finalState
+        villagers: zodiacState
       })
     } 
   )}
